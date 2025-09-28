@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Devices</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">SD</a>
+    <button class="btn btn-outline-dark ms-auto" onclick="location.href='admin.html'">Admin</button>
+  </div>
+</nav>
+
+<main class="container mt-5 pt-4">
+  <!-- Filtros -->
+  <div class="row mb-3 g-2">
+    <div class="col-md-4"><input id="q" class="form-control" placeholder="Buscar..."></div>
+    <div class="col-md-3"><select id="brand" class="form-select"></select></div>
+    <div class="col-md-3"><select id="type" class="form-select"></select></div>
+    <div class="col-md-2">
+      <select id="sortBy" class="form-select">
+        <option value="fecha-desc">Lanzamiento (nuevo→antiguo)</option>
+        <option value="fecha-asc">Lanzamiento (antiguo→nuevo)</option>
+        <option value="precio-asc">Precio (bajo→alto)</option>
+        <option value="precio-desc">Precio (alto→bajo)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row" id="device-list"></div>
+  <div id="detail" class="mt-4"></div>
+</main>
+
+<footer class="text-center mt-4 mb-4 text-muted">
+  Proyecto académico Front‑End • Datos desde API • Hecho con Bootstrap.
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>

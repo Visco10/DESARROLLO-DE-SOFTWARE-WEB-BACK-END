@@ -1,0 +1,140 @@
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+  --radius: 16px;
+  --primary-color: #212529;
+  --secondary-color: #6c757d;
+  --bg-light: #f6f7f9;
+  --bg-card: #fff;
+  --bg-badge: #f1f3f5;
+  --border-color: #e9ecef;
+  --star-color: #f5c518;
+  --transition-speed: 0.2s;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+body {
+  background: var(--bg-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 70px; /* espacio para navbar fijo */
+}
+
+h2, h3, h5, h6 {
+  margin-bottom: 0.5rem;
+}
+
+a, button {
+  transition: filter var(--transition-speed) ease;
+}
+button:hover {
+  filter: brightness(0.95);
+}
+
+/* ===== NAVBAR ===== */
+.navbar-brand {
+  font-weight: 700;
+}
+
+/* ===== BADGES ===== */
+.brand-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.badge-type {
+  background: var(--bg-badge);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+.device-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.device-img {
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 12px;
+  background: var(--bg-badge);
+  padding: 8px;
+}
+
+/* ===== DETALLE DISPOSITIVO ===== */
+.tab-section #detail {
+  margin-top: 1.5rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #28a745;
+}
+
+.comment {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--bg-card);
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  color: var(--star-color);
+}
+
+/* ===== DIAGRAMAS ===== */
+.mer-diagram {
+  background: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ===== TABS ===== */
+.tab-section {
+  margin-top: 1rem;
+}
+
+.tab-section .card {
+  border-color: var(--border-color);
+}
+
+/* ===== FORMULARIOS ===== */
+form input,
+form select,
+form textarea {
+  border-radius: var(--radius);
+}
+
+#login-form input,
+#create-form input,
+#create-form select {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+  .device-card img {
+    aspect-ratio: auto;
+  }
+}
